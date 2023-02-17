@@ -6,10 +6,11 @@ namespace TESTESRest.Controllers
 
     /* Não utilizar o route tinha levado a um cenário de conflitos de rotas
      * Os métodos get não eram chamados corretamente.
-     * Isso fez com que sempre o método get(int id) fosse chamado, mesmo sem passar id na rota.
+     * Isso fez com que sempre o método get(int id) fosse chamado, mesmo sem passar id na 
      */
-
-    [Route("api/person")]
+    [ApiVersion("1")]
+    [ApiController]
+    [Route("api/[controller]/v{version:apiVersion}")]
     public class PersonController : Controller
     {
         private IPersonService _personService;

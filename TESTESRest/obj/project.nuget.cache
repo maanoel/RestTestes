@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "fvkSmJ4aydh4lADZHo7z35iBbx6mZ3taoEw2jkyvLzMYXuA6phLPvOYsaw7OBY2bN5s4UbJBGV2xz8VL5XUmaA==",
+  "dgSpecHash": "Z1JcmroK9balXQ0oYRyao/ZB5p7e39knuxqIm2cbm+/M3kvM9/TbfQXhnE8bOBbBpZA3Wj9S8+HEVgX8aZSU7A==",
   "success": true,
   "projectFilePath": "C:\\Users\\ManoelVitorBritoMour\\Desktop\\Laboratório\\TESTESRest\\TESTESRest\\TESTESRest.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ManoelVitorBritoMour\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
     "C:\\Users\\ManoelVitorBritoMour\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\ManoelVitorBritoMour\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\ManoelVitorBritoMour\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
