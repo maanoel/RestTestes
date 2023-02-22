@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using TESTESRest.Model;
+using TESTESRest.Repository;
 using TESTESRest.Services;
 
 namespace TESTESRest
@@ -28,6 +29,7 @@ namespace TESTESRest
 
             services.AddApiVersioning();
             services.AddScoped<IPersonService, PersonService>();
+            services.AddScoped<IPersonRepository, PersonRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

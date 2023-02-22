@@ -1,71 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using TESTESRest.Model;
+﻿using System.Collections.Generic;
+using TESTESRest.Repository;
 
 namespace TESTESRest.Services
 {
     public class PersonService : IPersonService
     {
-        private MySqlContext _context;
-
-        public PersonService(MySqlContext context)
+        private readonly IPersonRepository _personRepository;
+        public PersonService(IPersonRepository personRepository)
         {
-            _context = context;
+            _personRepository = personRepository;
         }
 
         public Person Create(Person person)
         {
-            try
-            {
-                _context.Add(person);
-                _context.SaveChanges();
-            }
-            catch (Exception )
-            {
-                throw;
-            }
-
-            return person;
+            return _personRepository.Create(person);
         }
 
         public void Delete(int id)
         {
-            _context.Remove(id);
+            _personRepository.Delete(id);
         }
 
         public IEnumerable<Person> FindAll()
         {
-            return _context.People;
+            return _personRepository.FindAll();
         }
 
         public Person FindById(int id)
         {
-            return _context.People.Find(id);
+            return _personRepository.FindById(id);
         }
 
         public Person Update(Person person)
         {
-            if (!Exists(person.Id)) return new Person();
-
-            var result = _context.People.Find(person.Id);
-
-            try
-            {
-                _context.Entry(result).CurrentValues.SetValues(person);
-                _context.SaveChanges();
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-            
-            return person;
-        }
-
-        private bool Exists(int id)
-        {
-            var person = _context.People.Find(id);
-            return person != null;
+            return _personRepository.Update(person);
         }
     }
 }
